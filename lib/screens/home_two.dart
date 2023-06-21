@@ -4,6 +4,7 @@ import 'location_screen.dart';
 
 class HomeTwo extends StatelessWidget {
   static const routeName = '/home_two';
+
   const HomeTwo({super.key});
 
   @override
@@ -49,12 +50,13 @@ class HomeTwo extends StatelessWidget {
                     const Text(
                       'Good morning Nekabari',
                       style: TextStyle(
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'Montserrat',
                         fontSize: 30,
                       ),
                     ),
                     const SizedBox(
-                      height: 35,
+                      height: 25,
                     ),
                     const SizedBox(
                       height: 10,
@@ -79,17 +81,36 @@ class HomeTwo extends StatelessWidget {
                         },
                         label: const Text(
                           'Where to?',
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: 'Montserrat',
+                          ),
                         ),
                       ),
                     ),
-                    ListTile(
+                    const ListTile(
                       leading: Icon(Icons.star),
-                      title: Text('Saved places'),
+                      title: Text(
+                        'Saved places',
+                        style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ),
+                      ),
                     ),
-                    ListTile(
+                    const ListTile(
                       leading: Icon(Icons.location_on),
-                      title: Text('Set location on map'),
+                      title: Text(
+                        'Set location on map',
+                        style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ),
+                      ),
                     ),
                   ],
                 ),

@@ -6,6 +6,7 @@ import '../../widgets/signup_widgets/form_passenger_section.dart';
 
 class SignUpAsDriver extends StatefulWidget {
   static const routeName = '/sign-up-as-driver';
+
   const SignUpAsDriver({super.key});
 
   @override
@@ -40,103 +41,105 @@ class _SignUpAsDriverState extends State<SignUpAsDriver> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 30),
-            child: Column(
-              children: [
-                const Text(
-                  'Sign up as',
-                  style: kHeaderText,
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      children: [
-                        GestureDetector(
-                          onTap: _isPassengerActive,
-                          child: _isPassenger
-                              ? Container(
-                                  width: 66,
-                                  height: 66,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      width: 5,
-                                      color: Colors.blue,
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 30),
+              child: Column(
+                children: [
+                  const Text(
+                    'Sign up as',
+                    style: kHeaderText,
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          GestureDetector(
+                            onTap: _isPassengerActive,
+                            child: _isPassenger
+                                ? Container(
+                                    width: 66,
+                                    height: 66,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 5,
+                                        color: Colors.blue,
+                                      ),
+                                      shape: BoxShape.circle,
                                     ),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: const Icon(
-                                    Icons.person,
-                                    size: 50,
-                                    color: Colors.grey,
-                                  ),
-                                )
-                              : Column(
-                                  children: const [
-                                    Icon(
+                                    child: const Icon(
                                       Icons.person,
                                       size: 50,
                                       color: Colors.grey,
                                     ),
-                                  ],
-                                ),
-                        ),
-                        const Text('Passenger')
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        GestureDetector(
-                          onTap: _isDriverActive,
-                          child: _isDriver
-                              ? Container(
-                                  width: 66,
-                                  height: 66,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      width: 5,
-                                      color: Colors.blue,
-                                    ),
-                                    shape: BoxShape.circle,
+                                  )
+                                : Column(
+                                    children: const [
+                                      Icon(
+                                        Icons.person,
+                                        size: 50,
+                                        color: Colors.grey,
+                                      ),
+                                    ],
                                   ),
-                                  child: const Icon(
-                                    Icons.person,
-                                    size: 50,
-                                    color: Colors.grey,
-                                  ),
-                                )
-                              : Column(
-                                  children: const [
-                                    Icon(
-                                      Icons.person,
-                                      size: 50,
-                                      color: Colors.grey,
-                                    ),
-                                  ],
-                                ),
-                        ),
-                        const Text('Driver')
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                _isPassenger
-                    ? FormPassengerSection(
-                        isPassengerSignUp: _isPassenger,
-                      )
-                    : FormDriverSection(
-                        isDriverSignUp: _isDriver,
+                          ),
+                          const Text('Passenger')
+                        ],
                       ),
-              ],
+                      Column(
+                        children: [
+                          GestureDetector(
+                            onTap: _isDriverActive,
+                            child: _isDriver
+                                ? Container(
+                                    width: 66,
+                                    height: 66,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 5,
+                                        color: Colors.blue,
+                                      ),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: const Icon(
+                                      Icons.person,
+                                      size: 50,
+                                      color: Colors.grey,
+                                    ),
+                                  )
+                                : Column(
+                                    children: const [
+                                      Icon(
+                                        Icons.person,
+                                        size: 50,
+                                        color: Colors.grey,
+                                      ),
+                                    ],
+                                  ),
+                          ),
+                          const Text('Driver')
+                        ],
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  _isPassenger
+                      ? FormPassengerSection(
+                          isPassengerSignUp: _isPassenger,
+                        )
+                      : FormDriverSection(
+                          isDriverSignUp: _isDriver,
+                        ),
+                ],
+              ),
             ),
           ),
         ),
