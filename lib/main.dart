@@ -23,53 +23,90 @@ import 'screens/home_two.dart';
 import 'screens/otp/otp_screen_driver.dart';
 import 'screens/sign_up/sign_up_driver.dart';
 import 'screens/sign_up/sign_up_passenger.dart';
+import './screens/profile_screen.dart';
+import './screens/passenger_dashboard.dart';
+import './screens/payment_method.dart';
+import './screens/promotion.dart';
+import './screens/work_rides.dart';
+import './screens/ride_history.dart';
+import './screens/intercity.dart';
+import './screens/settings.dart';
+import './screens/notification.dart';
+import './screens/terms_and_Policy.dart';
+import './screens/about_us.dart';
+import './screens/main_screen.dart';
+import './screens/invite_friends.dart';
+import './screens/invite_friends_2.dart';
+
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     home: MyApp(),
   ));
 }
 
+
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          iconTheme: IconThemeData(color: Colors.black),
+        debugShowCheckedModeBanner: false,
+        title: 'P Rides',
+        theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+            titleTextStyle: TextStyle(
+              fontFamily: 'Raleway',
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              color: Colors.black,
+            ),
+            iconTheme: IconThemeData(color: Colors.black),
+          ),
         ),
-      ),
-      home: const Scaffold(
-        body: SplashScreen(),
-      ),
-      routes: {
-        OnboardingScreen.routeName: (context) => const OnboardingScreen(),
-        SignUpScreen.routeName: (context) => const SignUpScreen(),
-        SignUpAsDriver.routeName: (context) => const SignUpAsDriver(),
-        SignUpAsPassenger.routeName: (context) => const SignUpAsPassenger(),
-        OTPScreenPassenger.routeName: (context) => const OTPScreenPassenger(),
-        OTPScreenDriver.routeName: (context) => const OTPScreenDriver(),
-        RegistrationOne.routeName: (context) => const RegistrationOne(),
-        RegistrationTwo.routeName: (context) => const RegistrationTwo(),
-        RegistrationThree.routeName: (context) => const RegistrationThree(),
-        RegistrationFour.routeName: (context) => const RegistrationFour(),
-        RegistrationFive.routeName: (context) => const RegistrationFive(),
-        RegistrationSix.routeName: (context) => const RegistrationSix(),
-        RegistrationSeven.routeName: (context) => const RegistrationSeven(),
-        RegistrationEight.routeName: (context) => const RegistrationEight(),
-        SigningScreen.routeName: (context) => const SigningScreen(),
-        SigningAsDriver.routeName: (context) => const SigningAsDriver(),
-        SigningAsPassenger.routeName: (context) => const SigningAsPassenger(),
-        ForgotPassword.routeName: (context) => const ForgotPassword(),
-        ChangePasswordScreen.routeName: (context) =>
-            const ChangePasswordScreen(),
-        OTPChangePassword.routeName: (context) => const OTPChangePassword(),
-        HomeScreen.routeName: (context) => HomeScreen(),
-        HomeTwo.routeName: (context) => const HomeTwo(),
-        LocationScreen.routeName: (context) => const LocationScreen(),
-      },
+        home: const Scaffold(
+          body: SplashScreen(),
+        ),
+        routes: {
+          OnboardingScreen.routeName: (context) => const OnboardingScreen(),
+          SignUpScreen.routeName: (context) => const SignUpScreen(),
+          SignUpAsDriver.routeName: (context) => const SignUpAsDriver(),
+          SignUpAsPassenger.routeName: (context) => const SignUpAsPassenger(),
+          OTPScreenPassenger.routeName: (context) => const OTPScreenPassenger(),
+          OTPScreenDriver.routeName: (context) => const OTPScreenDriver(),
+          RegistrationOne.routeName: (context) => const RegistrationOne(),
+          RegistrationTwo.routeName: (context) => const RegistrationTwo(),
+          RegistrationThree.routeName: (context) => const RegistrationThree(),
+          RegistrationFour.routeName: (context) => const RegistrationFour(),
+          RegistrationFive.routeName: (context) => const RegistrationFive(),
+          RegistrationSix.routeName: (context) => const RegistrationSix(),
+          RegistrationSeven.routeName: (context) => const RegistrationSeven(),
+          RegistrationEight.routeName: (context) => const RegistrationEight(),
+          SigningScreen.routeName: (context) => const SigningScreen(),
+          SigningAsDriver.routeName: (context) => const SigningAsDriver(),
+          SigningAsPassenger.routeName: (context) => const SigningAsPassenger(),
+          ForgotPassword.routeName: (context) => const ForgotPassword(),
+          ChangePasswordScreen.routeName: (context) =>
+          const ChangePasswordScreen(),
+          OTPChangePassword.routeName: (context) => const OTPChangePassword(),
+          HomeScreen.routeName: (context) => HomeScreen(),
+          HomeTwo.routeName: (context) => const HomeTwo(),
+          LocationScreen.routeName: (context) => const LocationScreen(),
+          ProfileScreen.routeName: (ctx) => ProfileScreen(),
+          PassengerDashboard.routeName: (ctx) => PassengerDashboard(),
+          PaymentMethod.routeName: (ctx) => PaymentMethod(),
+          PromotionScreen.routeName: (ctx) => PromotionScreen(),
+          WorkRides.routeName: (ctx) => WorkRides(),
+          RideHistory.routeName: (ctx) => RideHistory(),
+          Intercity.routeName: (ctx) => Intercity(),
+          SettingsScreen.routeName: (ctx) => SettingsScreen(),
+          NotificationScreen.routeName: (ctx) => NotificationScreen(),
+          TermsAndPolicy.routeName: (ctx) => TermsAndPolicy(),
+          AboutUs.routeName: (ctx) => AboutUs(),
+          MainScreen.routeName: (ctx) => MainScreen(),
+          InviteFriends.routeName: (ctx) => InviteFriends(),
+          InviteFriends2.routeName: (ctx) => InviteFriends2(),
+        }
     );
   }
 }

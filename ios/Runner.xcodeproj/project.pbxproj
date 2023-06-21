@@ -176,7 +176,10 @@
 			files = (
 			);
 			inputPaths = (
+<<<<<<< HEAD
 				"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}",
+=======
+>>>>>>> project/main
 			);
 			name = "Thin Binary";
 			outputPaths = (
