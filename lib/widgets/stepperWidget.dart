@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:p_rides/screens/driver_rating_screen.dart';
 import 'package:p_rides/screens/ride_detail_2.dart';
+import 'package:p_rides/screens/ride_detail_3.dart';
 import 'package:p_rides/widgets/destination_widget.dart';
 
 class StepperWidget extends StatelessWidget {
@@ -193,7 +195,10 @@ class StepperWidget extends StatelessWidget {
                     children: [
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context)
+                                .pushNamed(RideDetail3.routeName);
+                          },
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.red,
                               shape: RoundedRectangleBorder(
@@ -214,7 +219,10 @@ class StepperWidget extends StatelessWidget {
                       ),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context)
+                                .pushNamed(DriverRatingScreen.routeName);
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
                             shape: RoundedRectangleBorder(

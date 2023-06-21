@@ -164,10 +164,7 @@ class DuringRideScreen extends StatelessWidget {
                               backgroundColor: const Color(0xfff2f2f2),
                               child: IconButton(
                                 icon: Icon(Icons.phone),
-                                onPressed: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (ctx) => RideDetail3()));
-                                },
+                                onPressed: () {},
                               ),
                             ),
                           ],

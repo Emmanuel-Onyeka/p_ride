@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:p_rides/screens/tip_driver_screen.dart';
 
 class DriverRatingScreen extends StatelessWidget {
-  const DriverRatingScreen({Key? key}) : super(key: key);
+  static const routeName = '/driverRating';
 
   @override
   Widget build(BuildContext context) {

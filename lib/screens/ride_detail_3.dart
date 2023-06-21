@@ -172,11 +172,7 @@ class RideDetail3 extends StatelessWidget {
                             backgroundColor: const Color(0xfff2f2f2),
                             child: IconButton(
                               icon: Icon(Icons.phone),
-                              onPressed: () {
-                                //Todo: remove Navigator
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (ctx) => DriverRatingScreen()));
-                              },
+                              onPressed: () {},
                             ),
                           ),
                         ],

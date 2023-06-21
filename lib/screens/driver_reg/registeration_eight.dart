@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:p_rides/screens/main_screen.dart';
 
 class RegistrationEight extends StatelessWidget {
   static const routeName = '/registration_eight';
@@ -121,6 +122,7 @@ class RegistrationEight extends StatelessWidget {
                           );
                         },
                       );
+                      Navigator.of(context).pushNamed(MainScreen.routeName);
                     },
                     child: const Text('Submit'),
                   ),
